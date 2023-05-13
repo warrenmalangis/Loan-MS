@@ -1,0 +1,119 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #d6f1f0;
+}
+.container {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 530px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px 20px;
+    overflow-x: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15), 8px 0px 8px rgba(0, 0, 0, 0.15);
+  }
+  hr{
+    height: 2px;
+    background-color: #ccc; /* Set the background color of the line */
+    border: none;
+  }
+  h3{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #4C9A97;
+  }
+  label {
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+  input{
+    border: none;
+}
+
+input.form-control, select.form-control {
+    font-size: 0.9rem;
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    border-radius: 0.15rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #59C1BD;
+}
+input:focus, input.form-control:focus, select:focus, select.form-control:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+button.btn-sign-up {
+    background-color: #59C1BD;
+    color: white;
+    font-weight: 600;
+  }
+  button.btn-sign-up:hover {
+    background-color: #fff;
+    color: #59C1BD;
+    border: 2px solid #59C1BD;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  select.form-control.select2 {
+    width: 100%;
+  }
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .form-row .btn {
+    margin-left: auto;
+  }
+
+  @media (min-width: 768px) {
+    .col-md-6 {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 50%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .col-md-6 {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 50%;
+    }
+    .form-row {
+        flex-wrap: wrap;
+      }
+  }
+  @media (max-width: 576px) {
+    .container {
+      width: 90%;
+      height: 100vh;
+      max-width: none;
+    }
+    input, select {
+        font-size: 1rem;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+    }
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row .col-md-6 {
+        max-width: 100%;
+    }
+
+    .form-row .btn {
+        margin-left: 0;
+    }
+}
+  

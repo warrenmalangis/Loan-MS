@@ -1,3 +1,8 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
     background-color: #d6f1f0;
     font-family: "Montserrat", sans-serif;
@@ -14,9 +19,26 @@ body {
     padding: 2rem;
     border: 1px solid #ddd;
     border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.2rem 0.5rem rgba(53, 53, 53, 0.82) ;
+    z-index: 1;
 }
-
+.outside-logo {
+  filter: brightness(0) invert(1);
+  max-width: 280px;
+  height: auto;
+  margin-left: 180px;
+  margin-top: 50px;
+  background-position: 0%;
+}
+.outside-logo-below {
+  filter: brightness(0) invert(1);
+  bottom: 50px;
+  right: 280px;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  max-width: 300px;
+}
 .logo {
     margin-bottom: 2rem;
     text-align: center;
@@ -27,19 +49,15 @@ body {
     height: 100%;
 }
 
-.logo img {
-    width: 10rem;
-    height: auto;
+.logo .logo-pic {
+    width: 7.4rem;
+    height: 7rem;
     margin-top: 3rem;
 }
 
 .logo h1 {
     font-size: 1.5rem;
     margin-top: 1rem;
-}
-.login-form{
-    margin-top: 1rem;
-    margin-right: 0;
 }
 .welcome-container {
     position: absolute;
@@ -72,9 +90,11 @@ body {
     width: 90%;
     border-radius: 1.4rem;
     font-family: "Montserrat", sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     color: #fff;
     background-color: #46bbb7;
+    box-shadow: rgba(53, 53, 53, 0.82) 3px 1px 4px 0px;
+    margin-top: 25px;
 }
 .center-button:hover{
     background-color: #4C9A97;
@@ -88,7 +108,7 @@ body {
 }
 .forgot-password-link {
     display: block;
-    margin-top: 0.5rem;
+    margin-top: 0;
     font-size: 0.8rem;
     text-align: right;
     color: #4C9A97;
@@ -97,8 +117,8 @@ body {
 .logo .left-text {
     font-family: "Montserrat", sans-serif;
     color: #4C9A97;
-    margin-top: 6rem;
-    font-size: 15px;
+    margin-top: 5rem;
+    font-size: 13px;
     font-weight: 600;
   }
 .login-form .login-text {
@@ -107,7 +127,7 @@ body {
     font-size: 2rem;
     line-height: 2rem;
     font-weight: 600;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
  .forgot-password-link {
     text-align: right;
@@ -117,7 +137,6 @@ body {
   }
   .signup-text {
     text-align: center;
-    margin-top: 1.5rem;
     font-size: 1vw;
     line-height: 1vh;
     font-weight: 500;
@@ -154,7 +173,8 @@ body {
   input[type=text], input[type=password] {
     border: none;
     background: transparent;
-    font-size: 15px;
+    font-size: 1vw;
+    line-height: 1vh;
     border-top: 0px;
     border-radius: 0px;
     outline: none;
@@ -162,9 +182,12 @@ body {
     max-width: 100%;
     height: auto;
   }
-  input:focus{
-    outline: none !important;
-    box-shadow: 0 0 0;
+  input:focus, .form-control:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
   }
   input::selection{
     background: transparent;
@@ -175,19 +198,25 @@ body {
 }
   form {
     width: 85%;
+    padding: 25px 0;
     margin: 0 auto;
+  }
+  input {
+    background: transparent;
+    border: none;
+    outline: none;
   }
   .form-group .form-control{
     width: 245px;
     height: 25px;
-    border-bottom: 3px solid #59C1BD;
+    border-bottom: 2px solid #59C1BD;
     outline: none !important;
     background: transparent;
   }
 .form-control-label{
-    font-size: 14px;
+    font-size: 1.1vw;
+    line-height: 1.1vh;
     font-weight: 600;
-    letter-spacing: 1px;
     color: #4C9A97;
 }
 
@@ -200,8 +229,8 @@ body {
       font-size: 2rem;
       display: none;
     }
-    .logo img {
-        max-width: 40%;
+    .logo .logo-pic {
+        max-width: 20%;
         height: auto;
         margin-top: 1rem;
     }
@@ -220,6 +249,13 @@ body {
         font-size: 13px;
       }
       .forgot-password-link {
+        font-size: 13px;
+        margin-top: 8px;
+      }
+      .form-control-label {
+        font-size: 13px;
+      }
+      input[type=text], input[type=password] {
         font-size: 13px;
       }
       .input-group-prepend {
@@ -247,12 +283,13 @@ body {
   }
 @media (max-width: 576px) {
     .container {
-        height: 90vh;
+        height: 530px;
+        width: 300px;
         padding: 1rem;
         border: none;
     }
-    .logo img {
-        max-width: 25%;
+    .logo .logo-pic {
+        max-width: 15%;
         height: auto;
     }
     .login-form .login-text {

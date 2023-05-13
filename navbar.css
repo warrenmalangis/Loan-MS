@@ -1,0 +1,127 @@
+body{
+  background-color: #4C9A97;
+}
+  nav {
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.navbar {
+  transition: transform 0.5s ease-in-out;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.navbar-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    color: #4C9A97;
+    margin-left: 1.5rem;
+  }
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  .navbar-toggler-icon {
+    display: block !important;
+  }
+  .navbar-close-icon {
+    display: none;
+  }
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    display: none;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] .navbar-close-icon {
+    display: inline-block;
+  }
+  .nav-link.btn[href="#"] {
+    background-color: #59C1BD;
+    color: #fff;
+    border: none;
+  }
+  
+  .nav-link.btn[href="#"]:hover {
+    background-color: #4C9A97;
+  }
+  
+  .nav-link.btn[href="#"]:focus {
+    box-shadow: 0 0 0 0.2rem rgba(89, 193, 189, 0.5);
+  }
+  
+  .nav-link.btn[href="#"]:not(.active) {
+    background-color: #fff;
+    border: 2px solid #59C1BD;
+    color: #4C9A97;
+  }
+  .nav-link.btn-register[href="#"]:not(.active) {
+    background-color: #59C1BD;
+    color: #fff;
+  }
+  .nav-link.btn[href="#"]:not(.active):hover {
+    background-color: #59C1BD;
+    color: #fff;
+  }
+  .navbar-nav .nav-link.btn-register[href="#"]:not(.active):hover {
+    background-color: #fafafa;
+    color: #59C1BD;
+  }
+  
+  .nav-link.btn-register {
+    background-color: #59C1BD;
+    color: #fff;
+  }  
+  .btn,
+.btn-register {
+  width: 120px;
+  height: 40px;
+}
+  @media (max-width: 991.98px) {
+    nav {
+      padding: 0;
+    }
+    .navbar {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .navbar-nav {
+      margin: 0;
+    }
+    .navbar-brand {
+      margin-right: 0;
+    }
+    .btn {
+      margin-right: 0;
+    }
+    
+    .nav-link {
+      margin: 0;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+      border-top: 1px solid rgba(0,0,0,.1);
+    }
+    
+    .nav-link:last-child {
+      border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+    .btn,
+  .btn-register {
+    width: 100%;
+    height: 100%;
+    margin: 0.4rem 0;
+  }
+  }
+  
