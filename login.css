@@ -9,7 +9,7 @@
   }
   .wrap {
     position: absolute;
-      background-color: #000;
+      background-color: transparent;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -80,14 +80,13 @@
     
     .welcome-text {
       font-family: "Montserrat", sans-serif;
-      font-size: 2.3vw;
-      line-height: 2.3vh;
+      font-size: 35px;
       color: #d6f1f0;
       writing-mode: vertical-lr;
       text-orientation: mixed;
       position: absolute;
       top: 0;
-      left: 20px;
+      left: 30px;
       font-weight: 900;
       transform-origin: top left;
       transform: translate(-100%, 0%);
@@ -118,7 +117,7 @@
   .forgot-password-link {
       display: block;
       margin-top: 0;
-      font-size: 0.8rem;
+      font-size: 14px;
       text-align: right;
       color: #4C9A97;
       text-decoration: underline;
@@ -142,13 +141,11 @@
    .forgot-password-link {
       text-align: right;
       color: #4C9A97;
-      font-size: 1vw;
-      line-height: 1vh;
+      font-size: 14px;
     }
     .signup-text {
       text-align: center;
-      font-size: 1vw;
-      line-height: 1vh;
+      font-size: 14px;
       font-weight: 500;
       color: #666;
     }
@@ -156,8 +153,7 @@
     .signup-text a {
       text-decoration: underline;
       color: #4C9A97;
-      font-size: 1vw;
-      line-height: 1vh;
+      font-size: 14px;
       flex: 1 1 100%;
     }
     .input-group-prepend {
@@ -174,8 +170,7 @@
     input[type=text], input[type=password] {
       border: none;
       background: transparent;
-      font-size: 1vw;
-      line-height: 1vh;
+      font-size: 16px;
       border-top: 0px;
       border-radius: 0px;
       outline: none;
@@ -215,8 +210,7 @@
       background: transparent;
     }
   .form-control-label{
-      font-size: 1.1vw;
-      line-height: 1.1vh;
+      font-size: 16px;
       font-weight: 600;
       color: #4C9A97;
   }
@@ -293,29 +287,58 @@
         display: none;
       }
     }
-  @media (max-width: 576px) {
-    .wrap{
-      display: unset;
-      width: 40%;
-    }
-    .outside-logo, .outside-logo-below {
-      display: none;
-      height: 0px;
-      width: 0px;
-    }
-    .wrap.container {
-          height: 530px;
-          max-width: 300px;
-          padding: 1rem;
-          border: none;
-          
+    @media (max-width: 576px) {
+      .wrap {
+        width: 100%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+      }
+      .container {
+        max-width: 90%;
+        min-width: unset;
+        height: auto;
+        padding: 1rem;
+        border: none;
+      }
+      .outside-logo,
+      .outside-logo-below {
+        display: none;
       }
       .logo .logo-pic {
-          max-width: 15%;
-          height: auto;
+        max-width: 20%;
+        height: auto;
+        margin-top: 1rem;
+      }
+      .logo .left-text {
+        margin-top: 1rem;
+        font-size: 12px;
       }
       .login-form .login-text {
-          margin-bottom: 1rem;
-          max-width: 30px;
-        }
-  }
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+      input[type="text"] {
+        width: 100%;
+        font-size: 1.2rem;
+      }
+      .signup-text a,
+      .signup-text,
+      .forgot-password-link,
+      .form-control-label,
+      input[type="password"],
+      .input-group-prepend {
+        font-size: 13px;
+      }
+      .input-group-prepend {
+        position: relative;
+        right: unset;
+        margin-top: 0;
+        margin-right: 0;
+      }
+      .input-group-text {
+        margin-right: 0;
+        border-right: none;
+      }
+    }
+    
