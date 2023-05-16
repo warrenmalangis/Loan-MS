@@ -1,63 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Responsive Navbar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/js/select2.min.js"></script>
-    <link rel="stylesheet" href="path/to/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="reg.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  </head>
-  <body>
+<head>
+  <title>Responsive Navbar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/js/select2.min.js"></script>
+  <link rel="stylesheet" href="path/to/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="reg.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <style>
+    .label-birthday {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img src="logo.png" alt="" class="outside-logo">
     <div class="container">
-        <form>
-            <h3 class="text-center mb-4">Sign Up</h3>
-            <hr>
-          <div class="form-row">
-            <div class="form-group col-md-4">
-              <label for="last-name">Last Name</label>
-              <input type="text" class="form-control" id="last-name" placeholder="">
-            </div>
-            <div class="form-group col-md-4">
-              <label for="first-name">First Name</label>
-              <input type="text" class="form-control" id="first-name" placeholder="">
-            </div>
-            <div class="form-group col-md-4">
-              <label for="middle-name">Middle Name</label>
-              <input type="text" class="form-control" id="middle-name" placeholder="">
-            </div>
+      <form>
+        <h3 class="text-center mb-4">Sign Up</h3>
+        <hr>
+        <div class="form-row">
+          <div class="form-group col-md-5">
+            <input type="text" class="form-control" id="last-name" placeholder="Last Name">
           </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="mobile-number">Mobile Number or Email</label>
-              <input type="tel" class="form-control" id="mobile-number" placeholder="">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="sex">Sex</label>
-              <select id="sex" class="form-control">
-                <option selected>Choose...</option>
-                <option>Male</option>
-                <option>Female</option>
-              </select>
-            </div>
+          <div class="form-group col-md-5">
+            <input type="text" class="form-control" id="first-name" placeholder="First Name">
           </div>
-          <div class="form-group">
-            <label for="address">Full Address</label>
-            <input type="text" class="form-control" id="address" placeholder="">
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control" id="middle-name" placeholder="M.">
           </div>
-          <div class="text-center">
-          <label for="birth-date">Birthday</label>
         </div>
-          <div class="form-row">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="tel" class="form-control" id="mobile-number" placeholder="Mobile Number or Email">
+          </div>
+          <div class="form-group col-md-6">
+            <select id="sex" class="form-control">
+              <option selected>Choose...</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group col-md-12 birthday-group">
+          <label for="birth-date" class="label-birthday">Birthday</label>
+          <div class="form-row birthday-row">
             <div class="form-group col-md-4">
-              <label for="month">Month</label>
-              <select class="form-control select2" id="month" name="month">
-                <option value=""></option>
+              <select class="form-control select2"id="month" name="month">
+                <option selected value="Month">Month</option>
                 <option value="01">January</option>
                 <option value="02">February</option>
                 <option value="03">March</option>
@@ -70,45 +66,75 @@
                 <option value="10">October</option>
                 <option value="11">November</option>
                 <option value="12">December</option>
-              </select>
-            </div>
-            <div class="form-group col-md-4">
-              <label for="day">Day</label>
-              <select class="form-control select2" id="day" name="day">
-                <option value=""></option>
+                </select>
+                </div>
+                <div class="form-group col-md-4">
+                <select class="form-control select2" id="day" name="day">
+                <option selected value="Day">Day</option>
                 <?php for ($i = 1; $i <= 31; $i++) : ?>
-                  <option value="<?= str_pad($i, 2, '0', STR_PAD_LEFT) ?>"><?= $i ?></option>
+                <option value="<?= str_pad($i, 2, '0', STR_PAD_LEFT) ?>"><?= $i ?></option>
                 <?php endfor; ?>
-              </select>
-            </div>
-            <div class="form-group col-md-4">
-              <label for="year">Year</label>
-              <select class="form-control select2" id="year" name="year">
-                <option value=""></option>
+                </select>
+                </div>
+                <div class="form-group col-md-4">
+                <select class="form-control select2" id="year" name="year">
+                <option selected value="Year">Year</option>
                 <?php $currentYear = date('Y'); ?>
                 <?php for ($i = $currentYear - 100; $i <= $currentYear; $i++) : ?>
-                  <option value="<?= $i ?>"><?= $i ?></option>
+                <option value="<?= $i ?>"><?= $i ?></option>
                 <?php endfor; ?>
-              </select>
+                </select>
+                </div>
+                </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <input type="password" class="form-control" id="new-password" placeholder="New Password">
+                    <span class="password-toggle" id="new-password-toggle">
+                      <i class="fas fa-eye"></i>
+                    </span>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password">
+                    <span class="password-toggle" id="confirm-password-toggle">
+                      <i class="fas fa-eye"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="form-group text-right">
+                  <button type="submit" class="btn btn-sign-up">Sign Up</button>
+                </div>
+              </form>
             </div>
+            <img src="rectangle.png" alt="" class="outside-logo-below">
           </div>
+          <script>
+            const newPasswordInput = document.getElementById('new-password');
+            const confirmPasswordInput = document.getElementById('confirm-password');
+            const newPasswordToggle = document.getElementById('new-password-toggle');
+            const confirmPasswordToggle = document.getElementById('confirm-password-toggle');
           
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="new-password">New Password</label>
-              <input type="password" class="form-control" id="new-password" placeholder="">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="confirm-password">Confirm Password</label>
-              <input type="password" class="form-control" id="confirm-password" placeholder="">
-            </div>
-          </div>
-          <div class="form-group text-right">
-            <button type="submit" class="btn btn-sign-up">Sign Up</button>
-          </div>
-        </div>
-        </form>
-      </div>
-      
-  </body>
-</html>
+            const togglePasswordVisibility = (inputField, toggleElement) => {
+              const type = inputField.getAttribute('type');
+              const isPasswordVisible = type === 'text';
+          
+              if (isPasswordVisible) {
+                inputField.setAttribute('type', 'password');
+                toggleElement.innerHTML = '<i class="fas fa-eye"></i>';
+              } else {
+                inputField.setAttribute('type', 'text');
+                toggleElement.innerHTML = '<i class="fas fa-eye-slash"></i>';
+              }
+            };
+          
+            newPasswordToggle.addEventListener('click', () => {
+              togglePasswordVisibility(newPasswordInput, newPasswordToggle);
+            });
+          
+            confirmPasswordToggle.addEventListener('click', () => {
+              togglePasswordVisibility(confirmPasswordInput, confirmPasswordToggle);
+            });
+          </script>
+          
+        </body>
+        </html>            
