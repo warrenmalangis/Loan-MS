@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap">
+	<title>Topnav with sidebar</title>
+	<!-- Import bootstrap cdn -->
+	<link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity=
+"sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+		crossorigin="anonymous">
+	<!-- Import jquery cdn -->
+	<script src=
+"https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity=
+"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous">
+	</script>
+	<!-- Import popper.js cdn -->
+	<script src=
+"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity=
+"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous">
+	</script>
+	<!-- Import javascript cdn -->
+	<script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity=
+"sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous">
+	</script>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+</head>
+<body>
+	<!-- h-100 takes the full height of the body-->
+	<div class="container-fluid h-100">
+		<!-- h-100 takes the full height
+				of the container-->
+		<div class="row h-100">
+			<div class="col-2" id="green">
+				<div class="logo">
+                <img src="logo.png" alt="Loan Management System">
+                <h2>LOAN MANAGEMENT SYSTEM</h2>
+              </div>
+              <div class="profile">
+    <img src="admin-logo.png" alt="profile_picture">
+    <h3>Gerson O. Pantoja</h3>
+    <p>Admin</p>
+     <!-- <h3 style="color: #fff"><?php echo $firstName . ' ' . $middleName . '.' . ' ' . $lastName; ?></h3>
+    <p><?php echo isset($_SESSION['selectedRole']) ? $_SESSION['selectedRole'] : ''; ?></p> -->
+</div>
+				<!-- Navigation links in sidebar-->
+				<ul>
+            <li>
+                <a href="#" class="active">
+                    <span class="icon"><i class="fas fa-chart-line fa-fw"></i></span>
+                    <span class="item">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" id="members-dropdown">
+                  <span class="icon"><i class="fas fa-users fa-fw"></i></span>
+                  <span class="item">Members</span>
+                  <span class="dropdown-icon"><i class="fas fa-caret-down"></i></span>
+                </a>
+                <div class="dropdown-content">
+                  <a href="#"><i class="fas fa-user"></i> Add member</a>
+                  <a href="#"><i class="fas fa-search"></i> Search members</a>
+                  <a href="#"><i class="fas fa-list"></i> List members</a>
+                </div>
+              </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-coins fa-fw"></i></span>
+                    <span class="item">Loans</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-money-bill-wave fa-fw"></i></span>
+                    <span class="item">Cashflow</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-file-alt fa-fw"></i></span>
+                    <span class="item">Reports</span>
+                    <span class="dropdown-icon"><i class="fas fa-caret-down"></i></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-cog fa-fw"></i></span>
+                    <span class="item">Settings</span>
+                </a>
+            </li>
+        </ul>
+			</div>
+			<div class="col-10" style="padding: 0;">
+				<!-- Top navbar -->
+				<nav class="navbar navbar-expand-lg
+								navbar-light">
+					
+					<!-- Hamburger button that toggles the navbar-->
+					<button class="navbar-toggler" type="button"
+						data-toggle="collapse"
+						data-target="#navbarNavAltMarkup"
+						aria-controls="navbarNavAltMarkup"
+						aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<!-- navbar links -->
+					<div class="collapse navbar-collapse"
+						id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+							<div class="top_navbar_icons">
+                                <a href="#">
+                                  <i class="fas fa-user"></i>
+                                  <!-- <span><?php echo $_SESSION['username']; ?></span> -->
+                                </a>
+                                <a href="#">
+                                  <i class="fas fa-bell"></i>
+                                </a>
+                                <a href="#">
+                                  <i class="fas fa-sign-out-alt"></i>
+                                  <span>Exit</span>
+                                </a>
+                              </div>
+						</div>
+					</div>
+				</nav>
+				<!-- Contains the main content of the webpage-->
+				<!-- <p style="padding: 15px; text-align: justify;">
+					Bootstrap is a free and open-source
+					tool collection for creating responsive
+					websites and web applications.
+					It is the most popular HTML, CSS, and
+					JavaScript framework for developing
+					responsive, mobile-first web sites.
+				</p> -->
+                <div class='dashboard-app'>
+                    <div class='dashboard-content'>
+                        <div class='container'>
+                           <div class='card'>
+                              <div class='card-header'>
+                                 <h1>Dashboard</h1>
+                              </div>
+                              <div class="dashboard-container">
+                               <div class="dashboard-item">
+                                   <div class="icon"><i class="fas fa-users"></i></div>
+                                   <div class="title">Total Members: 5 <p>Male: 3</p><p>Female: 2</p></div>
+                               </div>
+                               <div class="dashboard-item">
+                                   <div class="icon"><i class="fas fa-user-check"></i></div>
+                                   <div class="title">Active Member<p>4</p></div>
+                               </div>
+                               <div class="dashboard-item">
+                                   <div class="icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                                   <div class="title">Open Loans<p>3</p></div>
+                               </div>
+                               <div class="dashboard-item">
+                                   <div class="icon"><i class="fas fa-hand-holding"></i></div>
+                                   <div class="title">Loans to be Collected<p>19, 800</p></div>
+                               </div>
+                               <div class="dashboard-item">
+                                   <div class="icon"><i class="fas fa-exclamation-circle"></i></div>
+                                   <div class="title">Delinquent Loans<p>0</p></div>
+                               </div>
+                               <div class="dashboard-item">
+                                   <div class="icon"><i class="fas fa-coins"></i></div>
+                                   <div class="title">Fines to be Collected<p>0.00</p></div>
+                               </div>
+                               <div class="dashboard-item">
+                                   <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
+                                   <div class="title">On-hand Cash<p>85, 000.00</p></div>
+                               </div>
+                               <div class="dashboard-item">
+                                   <div class="icon"><i class="fas fa-university"></i></div>
+                                   <div class="title">In-bank Cash<p>40, 000.00</p></div>
+                                   </div>
+                                   </div>
+                                   </div>
+                           </div>
+                        </div>
+                     </div>
+                    </div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
